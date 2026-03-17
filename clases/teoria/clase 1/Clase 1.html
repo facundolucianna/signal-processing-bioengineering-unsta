@@ -603,6 +603,15 @@
             display: block;
         }
     </style>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -1100,8 +1109,7 @@
     <div class="slide slide-content" data-slide="40">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
-            <pre class="fragment"><code class="language-python">def hola_mundo():
-    print("hola mundo")</code></pre>
+            <p class="fragment" style="margin-bottom:14px;">Formula $ x = x + 1 $</p>
         </div>
     </div>
 
@@ -1109,24 +1117,13 @@
     <div class="slide slide-content" data-slide="41">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
-            <pre class="fragment"><code class="language-">def hola_mundo():
-    print("hola mundo")</code></pre>
+            <p class="fragment" style="margin-bottom:14px;">Formula</p>
+            <p class="fragment" style="margin-bottom:14px;">$$ x = x + 1 $$</p>
         </div>
     </div>
 
-    <!-- ===================== SLIDE 43 ===================== -->
-    <div class="slide slide-content" data-slide="42">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <pre class="fragment"><code class="language-c">int main() {
-    printf("hola mundo");
-    return 0;
-}</code></pre>
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 44: CIERRE ===================== -->
-    <div class="slide slide-title" data-slide="43">
+    <!-- ===================== SLIDE 43: CIERRE ===================== -->
+    <div class="slide slide-title" data-slide="42">
         <div class="slide-inner">
             <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Muchas gracias</h2>
