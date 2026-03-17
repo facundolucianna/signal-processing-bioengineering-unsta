@@ -689,9 +689,9 @@
         <div class="slide-inner">
             <h2 class="fragment">Filtros digitales</h2>
             <ul>
-                <li class="fragment">Un <strong>filtro digital</strong> es un sistema que <strong>discrimina</strong> frecuencias o gamas de frecuencias de una señal, <strong>modificando su amplitud y fase</strong>.</li>
-                <li class="fragment">Los filtros que veremos son <strong>sistemas lineales e invariantes en el tiempo (LTI)</strong>.</li>
-                <li class="fragment">Se caracterizan mediante su <strong>función de transferencia</strong>, ya sea en el dominio del tiempo o mediante la <strong>transformada Z</strong>.</li>
+                <li class="fragment">Un <span class="colored-text" style="color: #fcd34d;"><strong>filtro digital</strong></span> es un sistema que <span class="colored-text" style="color: #fcd34d;"><strong>discrimina</strong></span> frecuencias o gamas de frecuencias de una señal, <span class="colored-text" style="color: #fcd34d;"><strong>modificando su amplitud y fase</strong></span>.</li>
+                <li class="fragment">Los filtros que veremos son <span class="colored-text" style="color: #fcd34d;"><strong>sistemas lineales e invariantes en el tiempo (LTI</span></strong>).</li>
+                <li class="fragment">Se caracterizan mediante su <span class="colored-text" style="color: #4ade80;"><strong>función de transferencia</strong></span>, ya sea en el dominio del tiempo o mediante la <span class="colored-text" style="color: #4ade80;"><strong>transformada Z</strong></span>.</li>
             </ul>
         </div>
     </div>
@@ -700,8 +700,7 @@
     <div class="slide slide-content" data-slide="3">
         <div class="slide-inner">
             <h2 class="fragment">Filtros digitales</h2>
-            <img src="img/slide_5_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_5_img_3.jpg" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide_5.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -709,7 +708,7 @@
     <div class="slide slide-content" data-slide="4">
         <div class="slide-inner">
             <h2 class="fragment">Filtros digitales</h2>
-            <img src="img/slide_6_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide6.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -718,30 +717,38 @@
         <div class="slide-inner">
             <h2 class="fragment">Filtros digitales</h2>
             <ul>
-                <li class="fragment">El efecto es similar al de los filtros analógicos, pero su <strong>implementación es diferente</strong> (dominio discreto).</li>
-                <li class="fragment"><strong>Filtros analógicos:</strong> Se implementan con circuitos electrónicos pasivos o activos.</li>
-                <li class="fragment"><strong>Filtros digitales:</strong> Se implementan mediante <strong>circuitos lógicos digitales</strong> (DSP, FPGA) o <strong>software</strong> (programas de computación).</li>
+                <li class="fragment">El efecto es similar al de los filtros analógicos, pero su <span class="colored-text" style="color: #fcd34d;"><strong>implementación es diferente</strong></span> (dominio discreto).</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #4ade80;"><em></em>Filtros analógicos:*</span> Se implementan con circuitos electrónicos pasivos o activos.</p>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #ffa3a3;"><strong>Filtros digitales:</strong></span> Se implementan mediante <span class="colored-text" style="color: #ffa3a3;"><strong>circuitos lógicos digitales</strong></span> (DSP, FPGA) o <span class="colored-text" style="color: #ffa3a3;"><strong>software</strong></span> (programas de computación).</p>
+            <ul>
+                <li class="fragment"><span class="colored-text" style="color: #ffa3a3;"><strong>Programable:</strong></span> Su operación depende de un programa almacenado en memoria. Sus características pueden <span class="colored-text" style="color: #ffa3a3;"><strong>cambiarse fácilmente</strong></span>.</li>
+                <li class="fragment"><span class="colored-text" style="color: #ffa3a3;"><strong>Alta estabilidad:</strong></span> Son extremadamente estables frente al tiempo y la temperatura.</li>
+                <li class="fragment"><span class="colored-text" style="color: #4ade80;"><em>Filtros analógicos (activos</span>:</em>) Suelen presentar <span class="colored-text" style="color: #4ade80;"><strong>derivas (drift</span></strong>) y <span class="colored-text" style="color: #4ade80;"><strong>dependencia térmica</strong></span>.</li>
             </ul>
         </div>
     </div>
 
     <!-- ===================== SLIDE 7 ===================== -->
-    <div class="slide slide-content" data-slide="6">
+    <div class="slide slide-title" data-slide="6">
         <div class="slide-inner">
-            <h2 class="fragment">Filtros digitales</h2>
-            <ul>
-                <li class="fragment"><strong>Programable:</strong> Su operación depende de un programa almacenado en memoria. Sus características pueden <strong>cambiarse fácilmente</strong>.</li>
-                <li class="fragment"><strong>Alta estabilidad:</strong> Son extremadamente estables frente al tiempo y la temperatura.</li>
-                <li class="fragment"><em>Filtros analógicos (activos):</em> Suelen presentar <strong>derivas (drift)</strong> y dependencia térmica.</li>
-            </ul>
+            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
+            <h2 class="fragment">Clasificación de filtros digitales</h2>
         </div>
     </div>
 
     <!-- ===================== SLIDE 8 ===================== -->
-    <div class="slide slide-title" data-slide="7">
+    <div class="slide slide-content" data-slide="7">
         <div class="slide-inner">
-            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
+            <ul>
+                <li class="fragment"><span class="colored-text" style="color: #4ade80;"><strong>No recursivos:</strong></span> La salida depende <span class="colored-text" style="color: #4ade80;"><strong>únicamente de las entradas</strong></span> (presentes y pasadas).</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \sum_{k=0}^{K} b[k] z^{-k} \quad \text{<--->} \quad y[n] = \sum_{k=0}^{K} b[k] x[n-k] $$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = \sum_{k=-K_1}^{K_2 - 1} b[k+K_1] x[n-k]$$</p>
+            <ul>
+                <li class="fragment"><span class="colored-text" style="color: #4ade80;"><strong>Estabilidad garantizada:</strong></span> Tienen todos sus <strong>polos en el origen</strong>.</li>
+            </ul>
         </div>
     </div>
 
@@ -750,13 +757,12 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>No recursivos:</strong> La salida depende <strong>únicamente de las entradas</strong> (presentes y pasadas).</li>
-                <li class="fragment"><strong>Estabilidad garantizada:</strong> Tienen todos sus <strong>polos en el origen</strong>.</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Sistemas FIR</strong> (<em>Finite Impulse Response</em></span>:) Su respuesta al impulso es <span class="colored-text" style="color: #fcd34d;"><strong>finita</strong></span>.</li>
+                <li class="fragment">En estos filtros, <span class="colored-text" style="color: #4ade80;"><strong>los coeficientes son directamente la respuesta al impulso</strong></span>.</li>
             </ul>
-            <img src="img/slide_10_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_10_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_10_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_10_img_7.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide_11_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = x[n] + 0.8 x[n-1] - 0.5 x[n-2] + 0.33 x[n-3] - 0.25 x[n-4] + 0.2 x[n-5] - 0.14 x[n-6] - 0.125 x[n-7] $$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \frac{z^7 + 0.8 z^6 - 0.5 z^5 + 0.33 z^4 - 0.25 z^3 + 0.2 z^2 - 0.14 z - 0.125}{z^7} $$</p>
         </div>
     </div>
 
@@ -765,12 +771,13 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>Sistemas FIR</strong> (<em>Finite Impulse Response</em>): Su respuesta al impulso es <strong>finita</strong>.</li>
-                <li class="fragment">En estos filtros, <strong>los coeficientes son directamente la respuesta al impulso</strong>.</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Recursivos:</strong></span> La salida depende de las entradas y de <span class="colored-text" style="color: #fcd34d;"><strong>salidas pasadas</strong></span>.</li>
             </ul>
-            <img src="img/slide_11_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_11_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_11_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \frac{\sum_{k=0}^{K-1} b[k] z^{-k}}{\sum_{l=1}^{L-1} a[l] z^{-l}}  \quad \text{<--->} \quad y[n] = \sum_{k=0}^{K-1} b[k] x[n-k] - \sum_{l=1}^{L-1} a[l] y[n-l] $$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = \sum_{k=-K_1}^{K_2-1} b[k+K_1] x[n-k] - \sum_{l=1}^{L-1} a[l] y[n-l] $$</p>
+            <ul>
+                <li class="fragment"><span class="colored-text" style="color: #4ade80;"><strong>Retroalimentación:</strong></span> Pueden presentar <span class="colored-text" style="color: #fbcfe8;"><strong>problemas de estabilidad</strong></span> (dependiendo de la ubicación de los polos).</li>
+            </ul>
         </div>
     </div>
 
@@ -779,12 +786,12 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>Recursivos:</strong> La salida depende de las entradas y de <strong>salidas pasadas</strong>.</li>
-                <li class="fragment"><strong>Retroalimentación:</strong> Pueden presentar <strong>problemas de estabilidad</strong> (dependiendo de la ubicación de los polos).</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Sistemas IIR</strong> (<em>Infinite Impulse Response</em></span>:) Su respuesta al impulso es <span class="colored-text" style="color: #fcd34d;"><strong>infinita</strong></span>.</li>
+                <li class="fragment">La respuesta <span class="colored-text" style="color: #4ade80;"><strong>tiende a cero</strong></span>, pero teóricamente nunca llega a él.</li>
             </ul>
-            <img src="img/slide_12_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_12_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_12_img_6.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide_13_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = 0.86 x[n] - 0.86 x[n-1] + 0.86 x[n-2] + 0.86 y[n-1] - 0.73 y[n-2] $$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \frac{0.86 z^2 - 0.86 z + 0.86}{z^2 - 0.86 z + 0.73} $$</p>
         </div>
     </div>
 
@@ -793,12 +800,11 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>Sistemas IIR</strong> (<em>Infinite Impulse Response</em>): Su respuesta al impulso es <strong>infinita</strong>.</li>
-                <li class="fragment">La respuesta <strong>tiende a cero</strong>, pero teóricamente nunca llega a él.</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Clasificación según la causalidad:</strong></span> ¿Utiliza muestras "del futuro"?</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Causal:</strong></span> Solo utiliza entradas y salidas <span class="colored-text" style="color: #4ade80;"><strong>presentes y pasadas</strong></span>. Poseen <span class="colored-text" style="color: #c084fc;"><strong>transformada Z</strong></span>.</li>
             </ul>
-            <img src="img/slide_13_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_13_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_13_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = 0.86 x[n] - 0.86 x[n-1] + 0.86 x[n-2] + 0.86 y[n-1] - 0.73 y[n-2] $$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \frac{0.86 z^2 - 0.86 z + 0.86}{z^2 - 0.86 z + 0.73} $$</p>
         </div>
     </div>
 
@@ -807,11 +813,13 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>Clasificación según la causalidad:</strong> ¿Utiliza muestras "del futuro"?</li>
-                <li class="fragment"><strong>Causal:</strong> Solo utiliza entradas y salidas <strong>presentes y pasadas</strong>. Poseen <strong>transformada Z</strong>.</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>No Causal:</strong></span> Utiliza <span class="colored-text" style="color: #fbcfe8;"><strong>muestras del futuro</strong></span>.</li>
+                <li class="fragment"><em>Ejemplo típico:</em> Cálculo de derivada por <span class="colored-text" style="color: #4ade80;"><strong>diferencia central</strong></span>.</li>
             </ul>
-            <img src="img/slide_14_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_14_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = \frac{f_s}{2} x[n+1] - \frac{f_s}{2} x[n-1] $$</p>
+            <ul>
+                <li class="fragment">Nos centraremos principalmente en <strong>sistemas causales</strong>.</li>
+            </ul>
         </div>
     </div>
 
@@ -820,38 +828,29 @@
         <div class="slide-inner">
             <h2 class="fragment">Clasificación de filtros digitales</h2>
             <ul>
-                <li class="fragment"><strong>No Causal:</strong> Utiliza <strong>muestras del futuro</strong>.</li>
-                <li class="fragment"><em>Ejemplo típico:</em> Cálculo de derivada por <strong>diferencia central</strong>.</li>
-                <li class="fragment">Nos centraremos principalmente en <strong>sistemas causales</strong>.</li>
+                <li class="fragment"><span class="colored-text" style="color: #fcd34d;"><strong>Orden del filtro:</strong></span> Número de <strong>muestras pasadas</strong> (retrasos) necesarias para calcular la salida.</li>
+                <li class="fragment"><em>Ejemplos:</em></li>
+                <li class="fragment">Orden cero: $y[n] = b[0] x[n]$</li>
+                <li class="fragment">1er Orden: $y[n] = b[0] x[n] + b[1] x[n-1]$</li>
+                <li class="fragment">2do Orden: $y[n] = b[0] x[n] + b[1] x[n-1] + b[2] x[n-2]$</li>
+                <li class="fragment">3er Orden: $y[n] = b[0] x[n] + b[1] x[n-1] + b[2] x[n-2] + b[3] x[n-3]$</li>
             </ul>
-            <img src="img/slide_15_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
     <!-- ===================== SLIDE 15 ===================== -->
-    <div class="slide slide-content" data-slide="14">
+    <div class="slide slide-title" data-slide="14">
         <div class="slide-inner">
-            <h2 class="fragment">Clasificación de filtros digitales</h2>
-            <ul>
-                <li class="fragment"><strong>Orden del filtro:</strong> Número de <strong>muestras pasadas</strong> (retrasos) necesarias para calcular la salida.</li>
-                <li class="fragment"><strong>Ejemplos visuales:</strong></li>
-                <li class="fragment">Orden cero</li>
-                <li class="fragment">1er Orden</li>
-                <li class="fragment">2do Orden</li>
-                <li class="fragment">3er Orden</li>
-            </ul>
-            <img src="img/slide_16_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_16_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_16_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_16_img_6.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
+            <h2 class="fragment">Tipos de filtros</h2>
         </div>
     </div>
 
     <!-- ===================== SLIDE 16 ===================== -->
-    <div class="slide slide-title" data-slide="15">
+    <div class="slide slide-content" data-slide="15">
         <div class="slide-inner">
-            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Tipos de filtros</h2>
+            <img src="img/slide16.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -859,7 +858,7 @@
     <div class="slide slide-content" data-slide="16">
         <div class="slide-inner">
             <h2 class="fragment">Tipos de filtros</h2>
-            <img src="img/slide_18_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide17.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -867,23 +866,33 @@
     <div class="slide slide-content" data-slide="17">
         <div class="slide-inner">
             <h2 class="fragment">Tipos de filtros</h2>
-            <img src="img/slide_19_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide18.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
     <!-- ===================== SLIDE 19 ===================== -->
-    <div class="slide slide-content" data-slide="18">
+    <div class="slide slide-title" data-slide="18">
         <div class="slide-inner">
-            <h2 class="fragment">Tipos de filtros</h2>
-            <img src="img/slide_20_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
+            <h2 class="fragment">Ejemplos de filtros</h2>
         </div>
     </div>
 
     <!-- ===================== SLIDE 20 ===================== -->
-    <div class="slide slide-title" data-slide="19">
+    <div class="slide slide-content" data-slide="19">
         <div class="slide-inner">
-            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Ejemplos de filtros</h2>
+            <ul>
+                <li class="fragment">Sistema de ganancia simple (amplificador): Este sistema aplica un factor de ganancia a cada valor de entrada.</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$ y[n] = b[0] x[n] $$</p>
+            <img src="img/slide20.png" class="slide-image-center fragment scale-in" alt="Image">
+            <ul>
+                <li class="fragment">$ 0 < b[0] < 1 $: Atenúa la señal.</li>
+                <li class="fragment">$ b[0] = 1 $: No modifica la señal.</li>
+                <li class="fragment">$ b[0] > 1 $: Amplifica la señal.</li>
+                <li class="fragment">$ b[0] < 0 $: Invierte la señal.</li>
+            </ul>
         </div>
     </div>
 
@@ -892,10 +901,10 @@
         <div class="slide-inner">
             <h2 class="fragment">Ejemplos de filtros</h2>
             <ul>
-                <li class="fragment">Sistema de ganancia simple (amplificador): Este sistema aplica un factor de ganancia a cada valor de entrada.</li>
+                <li class="fragment">Sistema de retardo puro: Este sistema aplica un retardo de k muestras.</li>
             </ul>
-            <img src="img/slide_22_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_22_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$ y[n] = x[n-k] $$</p>
+            <img src="img/slide21.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -903,12 +912,16 @@
     <div class="slide slide-content" data-slide="21">
         <div class="slide-inner">
             <h2 class="fragment">Ejemplos de filtros</h2>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtro de promedios móviles:</strong></span></p>
             <ul>
-                <li class="fragment">Sistema de retardo puro: Este sistema aplica un retardo de k muestras.</li>
+                <li class="fragment">Filtro <strong>FIR causal</strong>.</li>
+                <li class="fragment">Coeficientes con el <strong>mismo valor ($1/M$)</strong>.</li>
+                <li class="fragment">Orden del filtro: <strong>$M-1$</strong>.</li>
             </ul>
-            <img src="img/slide_23_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_23_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_23_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;">$$y[n] = \frac{1}{M} \sum_{k=0}^{M-1} x[n-k]$$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$b[k] = \frac{1}{M} \quad \text{para } k = 0, 1, \dots, M-1$$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$H(z) = \frac{1}{M} \sum_{k=0}^{M-1} z^{-k}$$</p>
+            <img src="img/slide22.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -916,15 +929,8 @@
     <div class="slide slide-content" data-slide="22">
         <div class="slide-inner">
             <h2 class="fragment">Ejemplos de filtros</h2>
-            <ul>
-                <li class="fragment"><strong>Filtro de promedios móviles:</strong></li>
-                <li class="fragment">Filtro <strong>FIR causal</strong>.</li>
-                <li class="fragment">Coeficientes con el <strong>mismo valor ($1/M$)</strong>.</li>
-                <li class="fragment">Orden del filtro: <strong>$M-1$</strong>.</li>
-            </ul>
-            <img src="img/slide_24_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_24_img_4.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_24_img_5.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtro de promedios móviles:</strong></span> Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</p>
+            <img src="img/slide23.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -932,13 +938,8 @@
     <div class="slide slide-content" data-slide="23">
         <div class="slide-inner">
             <h2 class="fragment">Ejemplos de filtros</h2>
-            <ul>
-                <li class="fragment"><strong>Filtro de promedios móviles:</strong></li>
-                <li class="fragment">Filtro <strong>FIR causal</strong>.</li>
-                <li class="fragment">Coeficientes con el <strong>mismo valor ($1/M$)</strong>.</li>
-                <li class="fragment">Orden del filtro: <strong>$M-1$</strong>.</li>
-            </ul>
-            <img src="img/slide_25_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtro de promedios móviles:</strong></span> Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</p>
+            <img src="img/slide24.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -946,47 +947,43 @@
     <div class="slide slide-content" data-slide="24">
         <div class="slide-inner">
             <h2 class="fragment">Ejemplos de filtros</h2>
-            <ul>
-                <li class="fragment">Filtro de promedio móviles: Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</li>
-            </ul>
-            <img src="img/slide_26_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtro de promedios móviles:</strong></span> Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</p>
+            <img src="img/slide25.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
     <!-- ===================== SLIDE 26 ===================== -->
-    <div class="slide slide-content" data-slide="25">
+    <div class="slide slide-title" data-slide="25">
         <div class="slide-inner">
-            <h2 class="fragment">Ejemplos de filtros</h2>
-            <ul>
-                <li class="fragment">Filtro de promedio móviles: Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</li>
-                <li class="fragment">Orden 2</li>
-                <li class="fragment">Orden 3</li>
-                <li class="fragment">Orden 4</li>
-                <li class="fragment">Orden 19</li>
-            </ul>
-            <img src="img/slide_27_img_7.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_27_img_8.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_27_img_9.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_27_img_10.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
+            <h2 class="fragment">Filtrados "diferentes"</h2>
         </div>
     </div>
 
     <!-- ===================== SLIDE 27 ===================== -->
     <div class="slide slide-content" data-slide="26">
         <div class="slide-inner">
-            <h2 class="fragment">Ejemplos de filtros</h2>
+            <h2 class="fragment">Filtrados "diferentes"</h2>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #4ade80;"><strong>Filtrados alternativos</strong></span> (más allá de la función de transferencia):</p>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #4ade80;"><strong>Quitar la tendencia (Detrend</span>:</strong>)</p>
             <ul>
-                <li class="fragment">Filtro de promedio móviles: Es un filtro pasabajo y su respuesta en frecuencia depende del orden del mismo.</li>
+                <li class="fragment">Remueve el valor de continua o una <strong>tendencia lineal</strong>.</li>
+                <li class="fragment">Implementado como <code>scipy.signal.detrend()</code>.</li>
             </ul>
-            <img src="img/slide_28_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <img src="img/slide27.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
     <!-- ===================== SLIDE 28 ===================== -->
-    <div class="slide slide-title" data-slide="27">
+    <div class="slide slide-content" data-slide="27">
         <div class="slide-inner">
-            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Filtrados "diferentes"</h2>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #4ade80;"><strong>Remoción de bajas frecuencias</strong> (Filtro pasa-alto</span>:)</p>
+            <ul>
+                <li class="fragment">Ideal para remover <strong>derivas lentas (drifts)</strong> de la señal.</li>
+                <li class="fragment"><strong>Técnica:</strong> Dividir la señal en <strong>segmentos/ventanas</strong>, quitar la tendencia a cada uno y unir los resultados.</li>
+            </ul>
+            <img src="img/slide29.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -994,14 +991,14 @@
     <div class="slide slide-content" data-slide="28">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtrado en el dominio de la frecuencia:</strong></span></p>
             <ul>
-                <li class="fragment"><strong>Filtrados alternativos</strong> (más allá de la función de transferencia):</li>
+                <li class="fragment">En lugar de la convolución temporal, se usa la <strong>FFT</strong> para pasar a la frecuencia.</li>
+                <li class="fragment">Se <strong>multiplica</strong> por la respuesta del filtro.</li>
+                <li class="fragment">Se retorna al tiempo con la <strong>IFFT</strong>.</li>
+                <li class="fragment">Muy utilizado en <strong>procesamiento de video</strong> y grandes volúmenes de datos.</li>
             </ul>
-            <p class="fragment" style="margin-bottom:14px;">1. <strong>Quitar la tendencia (Detrend):</strong></p>
-            <ul>
-                <li class="fragment">Remueve el valor de continua o una <strong>tendencia lineal</strong>.</li>
-                <li class="fragment">Implementado como <code>scipy.signal.detrend()</code>.</li>
-            </ul>
+            <img src="img/slide30.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -1009,7 +1006,14 @@
     <div class="slide slide-content" data-slide="29">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_31_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtrado en el dominio de la frecuencia:</strong></span></p>
+            <ul>
+                <li class="fragment">En lugar de la convolución temporal, se usa la <strong>FFT</strong> para pasar a la frecuencia.</li>
+                <li class="fragment">Se <strong>multiplica</strong> por la respuesta del filtro.</li>
+                <li class="fragment">Se retorna al tiempo con la <strong>IFFT</strong>.</li>
+                <li class="fragment">Muy utilizado en <strong>procesamiento de video</strong> y grandes volúmenes de datos.</li>
+            </ul>
+            <img src="img/slide31.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -1017,7 +1021,14 @@
     <div class="slide slide-content" data-slide="30">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_32_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtrado en el dominio de la frecuencia:</strong></span></p>
+            <ul>
+                <li class="fragment">En lugar de la convolución temporal, se usa la <strong>FFT</strong> para pasar a la frecuencia.</li>
+                <li class="fragment">Se <strong>multiplica</strong> por la respuesta del filtro.</li>
+                <li class="fragment">Se retorna al tiempo con la <strong>IFFT</strong>.</li>
+                <li class="fragment">Muy utilizado en <strong>procesamiento de video</strong> y grandes volúmenes de datos.</li>
+            </ul>
+            <img src="img/slide32.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
@@ -1025,105 +1036,19 @@
     <div class="slide slide-content" data-slide="31">
         <div class="slide-inner">
             <h2 class="fragment">Filtrados "diferentes"</h2>
+            <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #fcd34d;"><strong>Filtrado en el dominio de la frecuencia:</strong></span></p>
             <ul>
-                <li class="fragment"><strong>Remoción de bajas frecuencias</strong> (Filtro pasa-alto):</li>
-                <li class="fragment">Ideal para remover <strong>derivas lentas (drifts)</strong> de la señal.</li>
-                <li class="fragment"><strong>Técnica:</strong> Dividir la señal en <strong>segmentos/ventanas</strong>, quitar la tendencia a cada uno y unir los resultados.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 33 ===================== -->
-    <div class="slide slide-content" data-slide="32">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_34_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 34 ===================== -->
-    <div class="slide slide-content" data-slide="33">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_35_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 35 ===================== -->
-    <div class="slide slide-content" data-slide="34">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_36_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 36 ===================== -->
-    <div class="slide slide-content" data-slide="35">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <ul>
-                <li class="fragment"><strong>Filtrado en el dominio de la frecuencia:</strong></li>
                 <li class="fragment">En lugar de la convolución temporal, se usa la <strong>FFT</strong> para pasar a la frecuencia.</li>
                 <li class="fragment">Se <strong>multiplica</strong> por la respuesta del filtro.</li>
                 <li class="fragment">Se retorna al tiempo con la <strong>IFFT</strong>.</li>
                 <li class="fragment">Muy utilizado en <strong>procesamiento de video</strong> y grandes volúmenes de datos.</li>
             </ul>
+            <img src="img/slide34.png" class="slide-image-center fragment scale-in" alt="Image">
         </div>
     </div>
 
-    <!-- ===================== SLIDE 37 ===================== -->
-    <div class="slide slide-content" data-slide="36">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_38_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_38_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 38 ===================== -->
-    <div class="slide slide-content" data-slide="37">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_39_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 39 ===================== -->
-    <div class="slide slide-content" data-slide="38">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_40_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 40 ===================== -->
-    <div class="slide slide-content" data-slide="39">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <img src="img/slide_41_img_2.png" class="slide-image-center fragment scale-in" alt="Image">
-            <img src="img/slide_41_img_3.png" class="slide-image-center fragment scale-in" alt="Image">
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 41 ===================== -->
-    <div class="slide slide-content" data-slide="40">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <p class="fragment" style="margin-bottom:14px;">Formula $ x = x + 1 $</p>
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 42 ===================== -->
-    <div class="slide slide-content" data-slide="41">
-        <div class="slide-inner">
-            <h2 class="fragment">Filtrados "diferentes"</h2>
-            <p class="fragment" style="margin-bottom:14px;">Formula</p>
-            <p class="fragment" style="margin-bottom:14px;">$$ x = x + 1 $$</p>
-        </div>
-    </div>
-
-    <!-- ===================== SLIDE 43: CIERRE ===================== -->
-    <div class="slide slide-title" data-slide="42">
+    <!-- ===================== SLIDE 33: CIERRE ===================== -->
+    <div class="slide slide-title" data-slide="32">
         <div class="slide-inner">
             <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Muchas gracias</h2>
