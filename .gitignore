@@ -246,9 +246,6 @@ fabric.properties
 .DS_Store
 .obsidian/
 *.key
-clase4.key
-clase3.key
-clase2.key
-clase1.key
 ~*.*
 poetry.lock
+presentation_generator
