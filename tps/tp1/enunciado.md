@@ -5,26 +5,23 @@
 1. Creé una función en Python que, dada una señal $x[n]$ y un nivel de ruido SNR (en dB), le agregue ruido blanco gaussiano a la señal con el nivel de SNR indicado. Usando esta función, genera una señal senoidal de 20 Hz con ruido blanco (SNR = 5 dB). Utiliza un total de 200 muestras y una frecuencia de muestreo de 1000 Hz.
 
    a) Diseña dos filtros de promedio móvil:
-
-      i) Usando 3 muestras
-      ii) Usando 10 muestras
+      - i) Usando 3 muestras
+      - ii) Usando 10 muestras
 
    b) Caracterice a los filtros.
-
-      i) Clasifica el filtro con las clases vistas en clase.
-      ii) Determina el orden del filtro.
-      iii) Grafica el espectro en frecuencia del filtro.
-         1) ¿Cuál es la frecuencia de corte?
-         2) ¿Cuál es el ancho de banda de la zona de paso?
-         3) ¿Qué caída tiene en la zona de transición?
-         4) ¿Cuál es la mínima atenuación en la zona de bloqueo?
-      iv) Obtén la función de transferencia mediante la transformada Z de cada filtro y grafica el diagrama de polos y ceros.
-      v) Grafica la respuesta al impulso de los filtros.
+      - i) Clasifica el filtro con las clases vistas en clase.
+      - ii) Determina el orden del filtro.
+      - iii) Grafica el espectro en frecuencia del filtro.
+           - 1) ¿Cuál es la frecuencia de corte?
+           - 2) ¿Cuál es el ancho de banda de la zona de paso?
+           - 3) ¿Qué caída tiene en la zona de transición?
+           - 4) ¿Cuál es la mínima atenuación en la zona de bloqueo?
+      - iv) Obtén la función de transferencia mediante la transformada Z de cada filtro y grafica el diagrama de polos y ceros.
+      - v) Grafica la respuesta al impulso de los filtros.
 
    c) Filtra la señal.
-
-      i) Grafica la salida de la señal sin filtrar y las salidas filtradas.
-      ii) Grafica el espectro en frecuencia de la señal sin filtrar y las señales filtradas.
+      - i) Grafica la salida de la señal sin filtrar y las salidas filtradas.
+      - ii) Grafica el espectro en frecuencia de la señal sin filtrar y las señales filtradas.
 
 2. Un filtro digital tiene la siguiente función de transferencia:
 
