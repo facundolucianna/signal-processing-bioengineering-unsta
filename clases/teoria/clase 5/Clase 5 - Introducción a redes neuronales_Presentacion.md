@@ -420,7 +420,7 @@ $$E_{SSE}\!\left(\vec{W}\right) = \frac{1}{2} \sum_{j=1}^{p} \left(d_j - y_j\rig
 - Una sinapsis **aumenta** su eficacia (peso sináptico) si las dos neuronas conectadas tienden a estar activas o inactivas simultáneamente. En caso contrario, la fuerza de conexión se {rojo}(**atenúa**).
 - Esto puede llevarse a una fórmula de actualización de pesos usando una {amarillo}(**constante de aprendizaje**) $\eta$:
 
-$$\Delta w_{ij} = \eta \cdot x_i \cdot y$$
+$$\Delta w_i = \eta \cdot x_i \cdot y$$
 
 ---
 
@@ -437,7 +437,7 @@ $$\Delta w_{ij} = \eta \cdot x_i \cdot y$$
 - Si la salida es {verde}(**correcta**), los pesos no cambian.
 - Si es {rojo}(**incorrecta**), se ajusta cada $w_i$ proporcionalmente al error (válido si la salida es escalón):
 
-$$\Delta w_{ij} = \eta \cdot (d_{j} - y_{j}) \cdot x_{ij}$$
+$$\Delta w_i = \eta \cdot (d - y) \cdot x_i$$
 
 ---
 
@@ -474,9 +474,9 @@ while error > 0:
 
 ![imagen](img/image61b.png)
 
-- La parte lineal del perceptrón es equivalente a un {amarillo}(**producto escalar**), considerando al *bias* como un peso más asociado a una entrada constante de $1$:
+- La parte lineal del perceptrón es equivalente a un {amarillo}(**producto escalar**) entre el vector de pesos y el vector de entradas:
 
-$$\sum_{i=1}^{n} w_i x_i + b = \vec{W}^T \vec{X}$$
+$$\sum_{i=1}^{n} w_i x_i + b = \vec{W}^T \vec{X} + b$$
 
 - Geométricamente, no es más que la ecuación de una {verde}(**recta**) (o un **hiperplano** en dimensiones mayores):
 

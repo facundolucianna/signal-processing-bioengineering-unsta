@@ -1123,7 +1123,7 @@
                 <li class="fragment">Una sinapsis <strong>aumenta</strong> su eficacia (peso sináptico) si las dos neuronas conectadas tienden a estar activas o inactivas simultáneamente. En caso contrario, la fuerza de conexión se <span class="colored-text" style="color: #ffa3a3;"><strong>atenúa</strong></span>.</li>
                 <li class="fragment">Esto puede llevarse a una fórmula de actualización de pesos usando una <span class="colored-text" style="color: #fcd34d;"><strong>constante de aprendizaje</strong></span> $\eta$:</li>
             </ul>
-            <p class="fragment" style="margin-bottom:14px;">$$\Delta w_{ij} = \eta \cdot x_i \cdot y$$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$\Delta w_i = \eta \cdot x_i \cdot y$$</p>
         </div>
     </div>
 
@@ -1139,7 +1139,7 @@
                 <li class="fragment">Si la salida es <span class="colored-text" style="color: #4ade80;"><strong>correcta</strong></span>, los pesos no cambian.</li>
                 <li class="fragment">Si es <span class="colored-text" style="color: #ffa3a3;"><strong>incorrecta</strong></span>, se ajusta cada $w_i$ proporcionalmente al error (válido si la salida es escalón):</li>
             </ul>
-            <p class="fragment" style="margin-bottom:14px;">$$\Delta w_{ij} = \eta \cdot (d_{j} - y_{j}) \cdot x_{ij}$$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$\Delta w_i = \eta \cdot (d - y) \cdot x_i$$</p>
         </div>
     </div>
 
@@ -1170,9 +1170,9 @@
             <p class="fragment" style="margin-bottom:14px;"><span class="colored-text" style="color: #4ade80;"><strong>Regla del Perceptrón: Interpretación gráfica</strong></span></p>
             <img src="img/image61b.png" class="slide-image-center fragment scale-in" alt="Image">
             <ul>
-                <li class="fragment">La parte lineal del perceptrón es equivalente a un <span class="colored-text" style="color: #fcd34d;"><strong>producto escalar</strong></span>, considerando al <em>bias</em> como un peso más asociado a una entrada constante de $1$:</li>
+                <li class="fragment">La parte lineal del perceptrón es equivalente a un <span class="colored-text" style="color: #fcd34d;"><strong>producto escalar</strong></span> entre el vector de pesos y el vector de entradas:</li>
             </ul>
-            <p class="fragment" style="margin-bottom:14px;">$$\sum_{i=1}^{n} w_i x_i + b = \vec{W}^T \vec{X}$$</p>
+            <p class="fragment" style="margin-bottom:14px;">$$\sum_{i=1}^{n} w_i x_i + b = \vec{W}^T \vec{X} + b$$</p>
             <ul>
                 <li class="fragment">Geométricamente, no es más que la ecuación de una <span class="colored-text" style="color: #4ade80;"><strong>recta</strong></span> (o un <strong>hiperplano</strong> en dimensiones mayores):</li>
             </ul>
