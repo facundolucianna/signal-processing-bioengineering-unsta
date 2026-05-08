@@ -962,3 +962,111 @@ $$\frac{\partial l\!\left(Y^{[i]}, D^{[i]}\right)}{\partial o_{j}} = \frac{e^{o_
 > La derivada es, elegantemente, la {amarillo}(**diferencia directa**) entre la probabilidad asignada por el modelo y el valor verdadero (one-hot).
 
 ---
+
+<!-- slide -->
+## Diapositiva 72
+### Decaimiento de pesos y regularización L2
+
+---
+
+<!-- slide -->
+## Diapositiva 73
+### El problema del sobreajuste
+
+- Cuando entrenamos un modelo, lo que **realmente queremos** es que {verde}(**generalice**): que funcione bien con datos {amarillo}(**nuevos**), no sólo con los del entrenamiento.
+- Si el modelo tiene muchos parámetros y poco dato, puede {rojo}(**memorizar**) el dataset de entrenamiento — error de entrenamiento bajísimo, pero error de testeo alto.
+
+> Este fenómeno se llama {rojo}(**sobreajuste**) (*overfitting*): la curva pasa exactamente por todos los puntos del dataset, pero oscila salvajemente entre ellos.
+
+![imagen](img/image121.png)
+
+- Un síntoma típico del sobreajuste: los **pesos sinápticos** crecen mucho en valor absoluto.
+
+---
+
+<!-- slide -->
+## Diapositiva 74
+### La idea: pesos chicos = modelo más simple
+
+- En Machine Learning vale la **navaja de Occam**: entre dos modelos que explican los datos, preferimos el {verde}(**más simple**).
+- Pesos chicos en valor absoluto producen funciones más {amarillo}(**suaves**): pequeños cambios en la entrada generan pequeños cambios en la salida.
+- Pesos grandes amplifican el ruido y hacen al modelo muy sensible a los datos de entrenamiento.
+
+> *Estrategia:* {verde}(**penalizar**) los pesos grandes directamente en la función de costo, para que el algoritmo prefiera soluciones con pesos chicos.
+
+---
+
+<!-- slide -->
+## Diapositiva 75
+### Regularización L2
+
+- Agregamos un nuevo término a la función de costo, llamado {amarillo}(**término de regularización**) $s(\vec{W})$:
+
+$$E_{reg}(\vec{W}) = E_{SSE}(\vec{W}) + \lambda \cdot s(\vec{W})$$
+
+- En la **regularización L2**, el término penaliza la {verde}(**norma cuadrática**) del vector de pesos:
+
+$$s(\vec{W}) = \frac{1}{2} \|\vec{W}\|^{2} = \frac{1}{2} \sum_{i=1}^{n} w_i^{2}$$
+
+- Por lo tanto, el costo regularizado queda:
+
+$$E_{reg}(\vec{W}) = \underbrace{\frac{1}{2} \sum_{j=1}^{p} (d_j - y_j)^{2}}_{\text{ajuste a los datos}} + \underbrace{\frac{\lambda}{2} \sum_{i=1}^{n} w_i^{2}}_{\text{penalización a los pesos}}$$
+
+> El entrenamiento ahora busca el {amarillo}(**equilibrio**) entre ajustar bien los datos **y** mantener los pesos chicos.
+
+---
+
+<!-- slide -->
+## Diapositiva 76
+### Cómo afecta al gradiente
+
+- Calculamos la derivada del nuevo costo respecto a un peso $w_i$:
+
+$$\frac{\partial E_{reg}}{\partial w_i} = \frac{\partial E_{SSE}}{\partial w_i} + \lambda \cdot w_i$$
+
+- Reemplazando en la regla de actualización del descenso por gradiente:
+
+$$w_i(t+1) = w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i} - \eta \lambda \cdot w_i(t)$$
+
+- Reordenando:
+
+$$w_i(t+1) = (1 - \eta \lambda) \cdot w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i}$$
+
+> En cada paso, **antes** de aplicar el gradiente del error, el peso se {verde}(**multiplica por un factor menor que 1**), encogiéndose hacia cero.
+
+---
+
+<!-- slide -->
+## Diapositiva 77
+### Por qué se llama "decaimiento de pesos"
+
+- El factor $(1 - \eta \lambda)$ es lo que da el nombre {amarillo}(***weight decay***):
+
+$$w_i(t+1) = \underbrace{(1 - \eta \lambda)}_{< 1} \cdot w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i}$$
+
+- Sin importar lo que diga el gradiente del error, hay una {verde}(**fuerza constante**) que tira al peso hacia cero en cada iteración.
+- Si el dato no aporta una razón fuerte para que un peso sea grande, el decaimiento gana y el peso {amarillo}(**se achica**).
+- Si el dato lo justifica, el gradiente del error compensa el decaimiento y el peso se mantiene.
+
+> Es exactamente el mismo concepto de "presión hacia la simplicidad" que aparece en muchas áreas: si nadie te empuja en otra dirección, decaés hacia el reposo.
+
+---
+
+<!-- slide -->
+## Diapositiva 78
+### El hiperparámetro λ
+
+El comportamiento del modelo depende fuertemente del valor de $\lambda$:
+
+- $\lambda \to 0$: prácticamente {rojo}(**no hay regularización**). El modelo puede sobreajustar.
+- $\lambda$ muy grande: el costo de tener pesos no nulos domina al ajuste, y los pesos se aplastan a cero. El modelo {rojo}(**subajusta**) (*underfitting*).
+- $\lambda$ "justo": el modelo encuentra el {verde}(**equilibrio**) entre ajustar los datos y mantenerse simple.
+
+> $\lambda$ es un {amarillo}(**hiperparámetro**): no se aprende durante el entrenamiento, sino que se elige usando un conjunto de **validación**.
+
+![imagen](img/image122.png)
+
+> Mantener los pesos chicos es una de las herramientas más simples y efectivas para combatir el sobreajuste, y por eso aparece en {amarillo}(**casi todos los entrenamientos modernos**).
+
+
+---

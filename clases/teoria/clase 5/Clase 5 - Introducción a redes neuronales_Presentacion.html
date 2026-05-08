@@ -1657,8 +1657,132 @@
         </div>
     </div>
 
-    <!-- ===================== SLIDE 70: CIERRE ===================== -->
+    <!-- ===================== SLIDE 70 ===================== -->
     <div class="slide slide-title" data-slide="69">
+        <div class="slide-inner">
+            <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
+            <h2 class="fragment">Decaimiento de pesos y regularización L2</h2>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 71 ===================== -->
+    <div class="slide slide-content" data-slide="70">
+        <div class="slide-inner">
+            <h2 class="fragment">El problema del sobreajuste</h2>
+            <ul>
+                <li class="fragment">Cuando entrenamos un modelo, lo que <strong>realmente queremos</strong> es que <span class="colored-text" style="color: #4ade80;"><strong>generalice</strong></span>: que funcione bien con datos <span class="colored-text" style="color: #fcd34d;"><strong>nuevos</strong></span>, no sólo con los del entrenamiento.</li>
+                <li class="fragment">Si el modelo tiene muchos parámetros y poco dato, puede <span class="colored-text" style="color: #ffa3a3;"><strong>memorizar</strong></span> el dataset de entrenamiento — error de entrenamiento bajísimo, pero error de testeo alto.</li>
+            </ul>
+            <blockquote class="fragment">
+                <p>Este fenómeno se llama <span class="colored-text" style="color: #ffa3a3;"><strong>sobreajuste</strong></span> (<em>overfitting</em>): la curva pasa exactamente por todos los puntos del dataset, pero oscila salvajemente entre ellos.</p>
+            </blockquote>
+            <img src="img/image121.png" class="slide-image-center fragment scale-in" alt="Image">
+            <ul>
+                <li class="fragment">Un síntoma típico del sobreajuste: los <strong>pesos sinápticos</strong> crecen mucho en valor absoluto.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 72 ===================== -->
+    <div class="slide slide-content" data-slide="71">
+        <div class="slide-inner">
+            <h2 class="fragment">La idea: pesos chicos = modelo más simple</h2>
+            <ul>
+                <li class="fragment">En Machine Learning vale la <strong>navaja de Occam</strong>: entre dos modelos que explican los datos, preferimos el <span class="colored-text" style="color: #4ade80;"><strong>más simple</strong></span>.</li>
+                <li class="fragment">Pesos chicos en valor absoluto producen funciones más <span class="colored-text" style="color: #fcd34d;"><strong>suaves</strong></span>: pequeños cambios en la entrada generan pequeños cambios en la salida.</li>
+                <li class="fragment">Pesos grandes amplifican el ruido y hacen al modelo muy sensible a los datos de entrenamiento.</li>
+            </ul>
+            <blockquote class="fragment">
+                <p><em>Estrategia:</em> <span class="colored-text" style="color: #4ade80;"><strong>penalizar</strong></span> los pesos grandes directamente en la función de costo, para que el algoritmo prefiera soluciones con pesos chicos.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 73 ===================== -->
+    <div class="slide slide-content" data-slide="72">
+        <div class="slide-inner">
+            <h2 class="fragment">Regularización L2</h2>
+            <ul>
+                <li class="fragment">Agregamos un nuevo término a la función de costo, llamado <span class="colored-text" style="color: #fcd34d;"><strong>término de regularización</strong></span> $s(\vec{W})$:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$E_{reg}(\vec{W}) = E_{SSE}(\vec{W}) + \lambda \cdot s(\vec{W})$$</p>
+            <ul>
+                <li class="fragment">En la <strong>regularización L2</strong>, el término penaliza la <span class="colored-text" style="color: #4ade80;"><strong>norma cuadrática</strong></span> del vector de pesos:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$s(\vec{W}) = \frac{1}{2} \|\vec{W}\|^{2} = \frac{1}{2} \sum_{i=1}^{n} w_i^{2}$$</p>
+            <ul>
+                <li class="fragment">Por lo tanto, el costo regularizado queda:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$E_{reg}(\vec{W}) = \underbrace{\frac{1}{2} \sum_{j=1}^{p} (d_j - y_j)^{2}}_{\text{ajuste a los datos}} + \underbrace{\frac{\lambda}{2} \sum_{i=1}^{n} w_i^{2}}_{\text{penalización a los pesos}}$$</p>
+            <blockquote class="fragment">
+                <p>El entrenamiento ahora busca el <span class="colored-text" style="color: #fcd34d;"><strong>equilibrio</strong></span> entre ajustar bien los datos <strong>y</strong> mantener los pesos chicos.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 74 ===================== -->
+    <div class="slide slide-content" data-slide="73">
+        <div class="slide-inner">
+            <h2 class="fragment">Cómo afecta al gradiente</h2>
+            <ul>
+                <li class="fragment">Calculamos la derivada del nuevo costo respecto a un peso $w_i$:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$\frac{\partial E_{reg}}{\partial w_i} = \frac{\partial E_{SSE}}{\partial w_i} + \lambda \cdot w_i$$</p>
+            <ul>
+                <li class="fragment">Reemplazando en la regla de actualización del descenso por gradiente:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$w_i(t+1) = w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i} - \eta \lambda \cdot w_i(t)$$</p>
+            <ul>
+                <li class="fragment">Reordenando:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$w_i(t+1) = (1 - \eta \lambda) \cdot w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i}$$</p>
+            <blockquote class="fragment">
+                <p>En cada paso, <strong>antes</strong> de aplicar el gradiente del error, el peso se <span class="colored-text" style="color: #4ade80;"><strong>multiplica por un factor menor que 1</strong></span>, encogiéndose hacia cero.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 75 ===================== -->
+    <div class="slide slide-content" data-slide="74">
+        <div class="slide-inner">
+            <h2 class="fragment">Por qué se llama "decaimiento de pesos"</h2>
+            <ul>
+                <li class="fragment">El factor $(1 - \eta \lambda)$ es lo que da el nombre <span class="colored-text" style="color: #fcd34d;"><strong><em>weight decay</strong></em></span>:</li>
+            </ul>
+            <p class="fragment" style="margin-bottom:14px;">$$w_i(t+1) = \underbrace{(1 - \eta \lambda)}_{< 1} \cdot w_i(t) - \eta \cdot \frac{\partial E_{SSE}}{\partial w_i}$$</p>
+            <ul>
+                <li class="fragment">Sin importar lo que diga el gradiente del error, hay una <span class="colored-text" style="color: #4ade80;"><strong>fuerza constante</strong></span> que tira al peso hacia cero en cada iteración.</li>
+                <li class="fragment">Si el dato no aporta una razón fuerte para que un peso sea grande, el decaimiento gana y el peso <span class="colored-text" style="color: #fcd34d;"><strong>se achica</strong></span>.</li>
+                <li class="fragment">Si el dato lo justifica, el gradiente del error compensa el decaimiento y el peso se mantiene.</li>
+            </ul>
+            <blockquote class="fragment">
+                <p>Es exactamente el mismo concepto de "presión hacia la simplicidad" que aparece en muchas áreas: si nadie te empuja en otra dirección, decaés hacia el reposo.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 76 ===================== -->
+    <div class="slide slide-content" data-slide="75">
+        <div class="slide-inner">
+            <h2 class="fragment">El hiperparámetro λ</h2>
+            <p class="fragment" style="margin-bottom:14px;">El comportamiento del modelo depende fuertemente del valor de $\lambda$:</p>
+            <ul>
+                <li class="fragment">$\lambda \to 0$: prácticamente <span class="colored-text" style="color: #ffa3a3;"><strong>no hay regularización</strong></span>. El modelo puede sobreajustar.</li>
+                <li class="fragment">$\lambda$ muy grande: el costo de tener pesos no nulos domina al ajuste, y los pesos se aplastan a cero. El modelo <span class="colored-text" style="color: #ffa3a3;"><strong>subajusta</strong></span> (<em>underfitting</em>).</li>
+                <li class="fragment">$\lambda$ "justo": el modelo encuentra el <span class="colored-text" style="color: #4ade80;"><strong>equilibrio</strong></span> entre ajustar los datos y mantenerse simple.</li>
+            </ul>
+            <blockquote class="fragment">
+                <p>$\lambda$ es un <span class="colored-text" style="color: #fcd34d;"><strong>hiperparámetro</strong></span>: no se aprende durante el entrenamiento, sino que se elige usando un conjunto de <strong>validación</strong>.</p>
+            </blockquote>
+            <img src="img/image122.png" class="slide-image-center fragment scale-in" alt="Image">
+            <blockquote class="fragment">
+                <p>Mantener los pesos chicos es una de las herramientas más simples y efectivas para combatir el sobreajuste, y por eso aparece en <span class="colored-text" style="color: #fcd34d;"><strong>casi todos los entrenamientos modernos</strong></span>.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===================== SLIDE 77: CIERRE ===================== -->
+    <div class="slide slide-title" data-slide="76">
         <div class="slide-inner">
             <img src="img/unsta-logo-blanco.png" class="logo fragment scale-in" alt="UNSTA Logo" style="height: 200px; width: auto; margin-bottom: 40px;">
             <h2 class="fragment">Muchas gracias</h2>
