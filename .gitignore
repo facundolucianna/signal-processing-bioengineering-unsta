@@ -250,3 +250,5 @@ fabric.properties
 poetry.lock
 presentation_generator
 alumnos.md
+alumnos
+.claude
